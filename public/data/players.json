@@ -1,0 +1,53 @@
+{
+  "players": [
+    {
+      "number": 3,
+      "name": "Lulu Strickland",
+      "gender": "F",
+      "nationality": "Brazilian",
+      "team": "Ignacio"
+    },
+    {
+      "number": 12,
+      "name": "Lorcan Salazar",
+      "gender": "M",
+      "nationality": "Brazilian",
+      "team": "Ignacio"
+    },
+    {
+      "number": 6,
+      "name": "Kye Mooney",
+      "gender": "F",
+      "nationality": "Brazilian",
+      "team": "Ignacio"
+    },
+    {
+      "number": 2,
+      "name": "Farhan O’Neill",
+      "gender": "M",
+      "nationality": "Brazilian",
+      "team": "Ignacio"
+    },
+    {
+      "number": 13,
+      "name": "Salman Poole",
+      "gender": "M",
+      "nationality": "Brazilian",
+      "team": "Ignacio"
+    },
+    {
+      "number": 44,
+      "name": "Krystal Faulkner",
+      "gender": "F",
+      "nationality": "Brazilian",
+      "team": "Ignacio"
+    },
+    {
+      "number": 6,
+      "name": "Ezekiel Graham",
+      "gender": "M",
+      "nationality": "Brazilian",
+      "team": "Ignacio"
+    }
+  ]
+}

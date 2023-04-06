@@ -1,0 +1,281 @@
+<%- include('./partials/head.ejs') %>
+
+<div class="content-wrapper">
+
+  <div class="home-team">
+
+    <div class="team-data">
+      <img class="flag" src="./media/dutch-flag.svg" alt="player info">
+      <h1 class="team-name">Spacers</h1>
+      <a class="team-info" href=""><img src="./media/info-b.svg" alt="player info"></a>
+    </div>
+
+    <div class="ply-data">
+      <ul class="ply-nr">
+            <li>3</li>
+            <li>12</li>
+            <li>6</li>
+            <li>2</li>
+            <li>13</li>
+            <li>44</li>
+            <li>6</li>
+      </ul>  
+
+      <ul class="ply-name">
+            <li>Lulu Strickland</li>
+            <li>Lorcan Salazar</li>
+            <li>Kye Mooney</li>
+            <li>Farhan O’Neill</li>
+            <li>Salman Poole</li>
+            <li>Krystal Faulkner</li>
+            <li>Ezekiel Graham</li>
+      </ul>
+          
+      <ul class="ply-gen">
+            <li>F</li>
+            <li>M</li>
+            <li>F</li>
+            <li>M</li>
+            <li>M</li>
+            <li>F</li>
+            <li>M</li>
+      </ul>
+          
+      <ul class="ply-info">
+            <li><a href=""><img src="./media/info.svg" alt="player info"></a></li>
+            <li><a href=""><img src="./media/info.svg" alt="player info"></a></li>
+            <li><a href=""><img src="./media/info.svg" alt="player info"></a></li>
+            <li><a href=""><img src="./media/info.svg" alt="player info"></a></li>
+            <li><a href=""><img src="./media/info.svg" alt="player info"></a></li>
+            <li><a href=""><img src="./media/info.svg" alt="player info"></a></li>
+            <li><a href=""><img src="./media/info.svg" alt="player info"></a></li>
+      </ul>
+    </div>
+  </div>
+
+ <div class="score-box">
+
+  <div class="live-total"><h1>12 vs 3</h1></div>
+  <div class="point-cat">
+    <ul class="cat">
+      <li><a href="">Points played</a></li>
+      <li><a href="">Turnovers</a></li>
+      <li><a href="">Blocks</a></li>
+      <li><a href="">Breaks</a></li>
+      <li><a href="">Broken</a></li>
+      <li><a href="">Conversions</a></li>
+    </ul>
+
+    <ul class="point">
+      <li>3</li>
+      <li>12</li>
+      <li>6</li>
+      <li>2</li>
+      <li>13</li>
+      <li>44</li>
+    </ul>
+  </div>
+
+ </div>
+
+ <div class="out-team">
+
+  <div class="team-data-o">
+    <img class="flag-o" src="./media/brazil-flag.svg" alt="player info">
+    <h1 class="team-name-o">Ignacio</h1>
+    <a class="team-info-o" href=""><img src="./media/info-b.svg" alt="player info"></a>
+  </div>
+
+  <ul id="player-list" class="ply-data" >
+    <ul id="player-number-list" class="ply-nr"></ul>
+    <ul id="player-name-list" class="ply-name"></ul>
+    <ul id="player-gender-list" class="ply-gen"></ul>
+    <ul id="player-info-list" class="ply-info"></ul>
+  </ul>
+
+  <div id="overlay">
+    <div id="overlay-content">
+    </div>  
+    <button id="close-button">✖️</button>
+  </div>
+
+</div>
+
+ <div class="container">
+  <div class="score-data-home">
+    <ul class="passes-home"> Passes
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+    </ul>
+    <ul class="turns-home"> Turns
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+    </ul>
+    <ul class="O-D-home"> O/D
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+    </ul>
+  </div>
+
+  <div class="left-side"></div>
+
+  <div class="middle-score">
+    <ul> Scores
+      <li>0-1</li>
+      <li>1-1</li>
+      <li>2-1</li>
+      <li>3-1</li>
+      <li>3-2</li>
+      <li>3-3</li>
+      <li>4-3</li>
+      <li>5-3</li>
+      <li>6-3</li>
+      <li>7-3</li>
+      <li>8-3</li>
+      <li>9-3</li>
+      <li>10-3</li>
+      <li>11-3</li>
+      <li>12-3</li>
+    </ul>
+  </div>
+  <div class="right-side"></div>
+
+  <div class="score-data-out">
+    <ul class="passes-out"> Passes
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+    </ul>
+    <ul class="turns-out"> Turns
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+    </ul>
+    <ul class="O-D-out"> O/D
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+      <li>0</li>
+    </ul>
+  </div>
+</div>
+
+<script src="/scripts/script.js"></script>
+
+<script>
+
+// kleuren 
+
+  const leftSide = document.querySelector(".left-side");
+const rightSide = document.querySelector(".right-side");
+const middleScore = document.querySelector(".middle-score");
+
+const updateColors = () => {
+  const [leftScore, rightScore] = middleScore.textContent.split("-").map(Number);
+  const scoreDiff = Math.abs(leftScore - rightScore);
+
+  if (scoreDiff === 0) {
+    leftSide.style.backgroundColor = "darkred";
+    rightSide.style.backgroundColor = "darkred";
+  } else if (scoreDiff === 1) {
+    if (leftScore > rightScore) {
+      leftSide.style.backgroundColor = "darkgreen";
+      rightSide.style.backgroundColor = "darkred";
+    } else {
+      leftSide.style.backgroundColor = "darkred";
+      rightSide.style.backgroundColor = "darkgreen";
+    }
+  } else {
+    if (leftScore > rightScore) {
+      leftSide.style.backgroundColor = "limegreen";
+      rightSide.style.backgroundColor = "red";
+    } else {
+      leftSide.style.backgroundColor = "red";
+      rightSide.style.backgroundColor = "limegreen";
+    }
+  }
+}
+
+// update colors on page load
+updateColors();
+
+// update colors when score changes
+middleScore.addEventListener("input", updateColors);
+</script>
+
+
+<%- include('./partials/foot.ejs') %>

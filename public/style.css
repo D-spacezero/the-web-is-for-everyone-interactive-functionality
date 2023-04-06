@@ -1,0 +1,397 @@
+body {
+  background: linear-gradient(101deg, 
+    #3A3C63 0%, 
+    #3A3C63 25%, 
+    #51B599 25%, 
+    #51B599 50%, 
+    #6E46CC 50%, 
+    #6E46CC 75%, 
+    #F19460 75%, 
+    #F19460 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:100%;
+  margin:0;
+  padding:0;
+  margin-bottom:20px;
+}
+
+/* ------ header and presets --------------------------------------------------------*/
+
+h1 {
+  margin:0;
+}
+
+a {
+  text-decoration:none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding:0;
+  margin:0;
+}
+
+
+header > a {
+  all: unset;  
+}
+
+header > ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;  
+}
+
+header > ul > li {
+  display: flex;
+  align-items: center;  
+  width: 100%;
+  color: white;
+}
+
+header > ul > li > a {
+  color:white;
+}
+
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 161px 161px 161px 161px 161px 161px 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 24px;
+  grid-template-areas:
+  ". logo . menu-items menu-items menu-items menu-items .";
+  background-color: #2E3338;
+  height: 76px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  grid-area: logo;
+  height: 36px;
+  padding-top:20px
+}
+
+.menu-items {
+  grid-area: menu-items;
+}
+
+/* ------ Main content --------------------------------------------------------*/
+
+.content-wrapper {
+  display: grid;
+  margin-top:136px;
+  grid-template-columns: 1fr 161px 161px 161px 161px 161px 161px 1fr;
+  grid-template-rows: 386px 1fr;
+  grid-gap: 24px;
+  grid-template-areas:
+  ". home-team home-team score-box score-box out-team out-team ."
+  ". live-score live-score live-score live-score live-score live-score .";
+}
+
+.content-wrapper > div {
+  filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.078));
+  background-color: white;
+  border-radius: 0.5em;
+}
+
+ 
+.home-team {
+  grid-area: home-team;
+}
+
+.score-box {
+  grid-area: score-box;
+  height: 386px;
+  margin: 0px 26px;
+
+}
+
+.out-team {
+  grid-area: out-team;
+}
+
+/* ------ Team data --------------------------------------------------------*/
+
+.team-data {
+  display: grid;
+  padding:20px 0 0 0;
+  grid-template-columns:20px 55px 168px 40px 65px;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  ". flag team-name team-name team-info";
+  height: 60px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.078);
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.flag {
+  grid-area: flag;
+}
+
+.team-name {
+  grid-area: team-name;
+  font-size:1.65em;
+  padding: 2px 0 0 20px;
+}
+
+.team-info {
+  grid-area: team-info;
+  display:block;
+  width:65px;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+/* ------ LIVE SCORE AND STATS --------------------------------------------------------*/
+
+.live-total {
+  padding-top:20px;
+  height: 60px;
+  background-color: #2E3338;
+  color:white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.078);
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.live-total > h1 {
+  font-size:2em;
+  text-align:center;
+}
+
+.point-cat {
+  display: grid;
+  grid-template-columns:40px 180px 40px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  ". cat point .";
+}
+
+.point-cat > ul {
+  line-height: 38px;
+  padding-top:20px;
+  padding-bottom:19px;  
+}
+
+.cat {
+  grid-area:cat;
+}
+
+.point {
+  grid-area:point;
+  display:block;
+  width:40px;
+  text-align: center;
+  background-color:#DBD9E4;
+  height:100%
+}
+
+/* ------ Team data-o (Offense side) --------------------------------------------------------*/
+
+.team-data-o {
+  display: grid;
+  padding:20px 0 0 0;
+  grid-template-columns:20px 55px 168px 40px 65px;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  ". flag-o team-name-o team-name-o team-info-o";
+  height: 60px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.078);
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+.flag-o {
+  grid-area: flag-o;
+}
+
+.team-name-o {
+  grid-area: team-name-o;
+  font-size:1.65em;
+  padding: 2px 0 0 20px;
+}
+
+.team-info-o {
+  grid-area: team-info-o;
+  display:block;
+  width:65px;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+
+/* ------ Player data --------------------------------------------------------*/
+
+.ply-data {
+  display: grid;
+  grid-template-columns:20px 55px 168px 40px 65px;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  ". ply-nr ply-name ply-gen ply-info";
+}
+
+.ply-data > ul {
+  line-height: 38px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.ply-nr {
+  grid-area: ply-nr;
+  width:55px;
+  text-align: center;
+  align-items: center;  
+}
+
+.ply-name {
+  grid-area: ply-name;
+  width:148px;
+  padding-left:20px;
+}
+
+.ply-gen {  
+  grid-area: ply-gen;
+  padding:0;
+  width:40px;
+  text-align: center;
+  background-color:#DBD9E4;
+}
+
+.ply-info {  
+  grid-area: ply-info;
+  display:block;
+  width:65px;
+  text-align: center;
+  padding: 4px 0 0 0;
+}
+
+
+
+/* ------ Game Flow --------------------------------------------------------*/
+
+
+
+
+.container {
+  grid-area:live-score;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.left-side, .right-side {
+  width: 91px;
+  margin: 0 10px;
+}
+
+.middle-score {
+  width:212px;
+  text-align:center;
+}
+
+.score-data-home {
+  display:flex;
+}
+
+.passes-home {
+  width:55px;
+  text-align:center;
+  padding-left:0px;
+  padding-right:20px;
+}
+
+.turns-home {
+  width:55px;
+  text-align:center;
+  padding-right:20px;
+}
+
+.O-D-home {
+  width:55px;
+  text-align:center;
+  padding-right:20px;
+}
+
+
+
+.score-data-out {
+  display:flex;
+}
+
+.passes-out {
+  width:55px;
+  text-align:center;
+  padding-left:20px;
+}
+
+
+.turns-out {
+  width:55px;
+  text-align:center;
+  padding-left:20px;
+}
+
+.O-D-out {
+  width:55px;
+  text-align:center;
+  padding-left:20px;
+}
+
+
+
+
+/* ------ TEST Player data --------------------------------------------------------*/
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 21%;
+  width: 100%;
+  height: 79%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  border-radius: 0px 0px 0.5em 0.5em;
+}
+
+#overlay-content {
+  position: absolute;
+  top: 41.96%;
+  left: 50%;
+  width: 83.5%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 0px 20px 20px 37px;
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+#close-button {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.ply-info > button {
+  all: unset;
+  display:block;
+  margin:auto;
+  cursor:pointer;
+}
+
+#updateForm > div {
+  padding-bottom: 0.85em;
+}
