@@ -6,7 +6,7 @@ const playerGenderList = document.querySelector("#player-gender-list");
 const playerInfoList = document.querySelector("#player-info-list");
 
 // read the player data from the JSON file
-fetch("/players")
+fetch("./data/players.json")
   .then((response) => response.json())
   .then((data) => {
     // access the player array
