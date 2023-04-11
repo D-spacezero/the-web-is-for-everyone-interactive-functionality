@@ -27,6 +27,7 @@ app.post("/players/:number", (request, response) => {
   );
   //console.log(json.players[0]);
 
+  
   //Update speler met nieuwe data
   json.players[index] = {
     number: Number(plyNumber),
@@ -41,6 +42,12 @@ app.post("/players/:number", (request, response) => {
   // Redirect home page
   response.redirect("/");
 });
+
+app.get("/players", (request, response) => {
+  fs.readFile('./public/data/players.json', (error,data)=>{
+    response.send(JSON.parse(data))
+  })
+})
 
 // Maak een route voor de index
 app.get("/", (request, response) => {
