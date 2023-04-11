@@ -1,5 +1,11 @@
 import express from "express";
-import fs from "@cyclic.sh/s3fs";
+import fsS3 from "@cyclic.sh/s3fs";
+import fs from "fs";
+
+fs.readFile('./public/data/players.json', (error, data)=>{
+  fsS3.writeFileSync("./public/data/players.json", data)
+})
+
 const url = "https://api.ultitv.fdnd.nl/api/v1/players";
 
 // Maak een nieuwe express app
@@ -20,7 +26,7 @@ app.post("/players/:number", (request, response) => {
   // Speler nummer uit url
   const plyNumber = request.params.number;
   // haalt json uit filemap
-  var json = JSON.parse(fs.readFileSync("./public/data/players.json", "utf8"));
+  var json = JSON.parse(fsS3.readFileSync("./public/data/players.json", "utf8"));
   // zoekt index van speler in array
   const index = json.players.findIndex(
     (player) => player.number === Number(plyNumber)
@@ -38,13 +44,13 @@ app.post("/players/:number", (request, response) => {
   };
 
   // Schrijft update terug naar file
-  fs.writeFileSync("./public/data/players.json", JSON.stringify(json, null, 2));
+  fsS3.writeFileSync("./public/data/players.json", JSON.stringify(json, null, 2));
   // Redirect home page
   response.redirect("/");
 });
 
 app.get("/players", (request, response) => {
-  fs.readFile('./public/data/players.json', (error,data)=>{
+  fsS3.readFile('./public/data/players.json', (error,data)=>{
     response.send(JSON.parse(data))
   })
 })
