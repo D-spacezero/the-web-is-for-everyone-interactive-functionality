@@ -2,9 +2,11 @@ import express from "express";
 import fsS3 from "@cyclic.sh/s3fs";
 import fs from "fs";
 
-fs.readFile('./public/data/players.json', (error, data)=>{
-  fsS3.writeFileSync("./public/data/players.json", data)
-})
+function resetData() {
+  fs.readFile('./public/data/players.json', (error, data)=>{
+    fsS3.writeFileSync("./public/data/players.json", data)
+  });
+}
 
 const url = "https://api.ultitv.fdnd.nl/api/v1/players";
 
@@ -59,6 +61,10 @@ app.get("/players", (request, response) => {
 app.get("/", (request, response) => {
   response.render("index");
 });
+
+// Reset .json data elk half uur, ivm cyclic
+setTimeout(resetData, 1800*1000);
+resetData();
 
 // Stel het poortnummer in en start express
 app.set("port", process.env.PORT || 8100);
