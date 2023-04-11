@@ -1,5 +1,5 @@
 import express from "express";
-import fs from "fs";
+import fs from "@cyclic.sh/s3fs";
 const url = "https://api.ultitv.fdnd.nl/api/v1/players";
 
 // Maak een nieuwe express app
